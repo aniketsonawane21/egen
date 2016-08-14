@@ -7,40 +7,35 @@ import org.mongodb.morphia.annotations.Property;
 @Entity("weightData")
 public class WeightData {
 	@Id
-	long time;
+	long timeStamp;
 	@Property
-	int val;
+	int value;
 	
-
 	public WeightData() {
 		super();
 	}
 
-	public long getTime() {
-		return time;
+	public long getTimeStamp() {
+		return timeStamp;
 	}
 
-	public void setTime(long time) {
-		this.time = time;
+	public void setTimeStamp(long timestamp) {
+		this.timeStamp = timestamp;
 	}
 
-	public int getVal() {
-		return val;
+
+	public int getValue() {
+		return value;
 	}
 
-	public void setVal(int val) {
-		this.val = val;
+	public void setValue(int value) {
+		this.value = value;
 	}
 
-	public WeightData(long time, int val) {
+	public WeightData(long timeStamp, int value) {
 		super();
-		this.time = time;
-		this.val = val;
+		this.timeStamp = timeStamp;
+		this.value = value;
 	}
 
-	@Override
-	public String toString() {
-		return "WeightData [time=" + time + ", val=" + val + "]";
-	}
-	
 }
