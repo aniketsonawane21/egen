@@ -31,7 +31,7 @@ public class WeightDataDAOImpl implements WeightDataDAO{
 
 	@Override
 	public List<WeightData> readByTimeRange(long timestamp1, long timestamp2) {
-		List<WeightData> weightMetrics = datastore.createQuery(WeightData.class).field("time").greaterThan(timestamp1).filter("time < ", timestamp2).asList();
+		List<WeightData> weightMetrics = datastore.createQuery(WeightData.class).field("timeStamp").greaterThan(timestamp1).filter("timeStamp < ", timestamp2).asList();
 		 return weightMetrics;
 	}
 

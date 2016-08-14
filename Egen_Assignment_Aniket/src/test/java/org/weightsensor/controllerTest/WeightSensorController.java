@@ -11,6 +11,7 @@ public class WeightSensorController extends TestCase{
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
+		
 	}
 
 	@Before
